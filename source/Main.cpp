@@ -82,7 +82,7 @@ static bool initialize()
                               SDL_WINDOWPOS_UNDEFINED,
                               RENDER_WIDTH * Configuration::getRenderScale(),
                               RENDER_HEIGHT * Configuration::getRenderScale(),
-                              0);
+                              SDL_WINDOW_RESIZABLE);
     if (window == nullptr)
     {
         std::cout << "SDL_CreateWindow() failed during initialize(): " << SDL_GetError() << std::endl;
